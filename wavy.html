@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curvacious</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Comfortaa;
+        color: white;
+        background: #202731;
+        overflow-x: hidden;
+      }
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+        padding: 100px 20vw;
+      }
+      .blue {
+        background: #3c31dd;
+      }
+      .red {
+        background: #dd3f31;
+      }
+      .pink {
+        background: #ff0066;
+      }
+      .dark {
+        background: #0f0f10;
+      }
+      .curve {
+        position: absolute;
+        height: 255px;
+        width: 100%;
+        bottom: 0;
+      }
+      .curve::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 55%;
+        height: 100%;
+        background-color: #202731;
+        transform: translate(85%, 60%);
+      }
+      .curve::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 55%;
+        height: 100%;
+        background-color: #3c31dd;
+        transform: translate(-4%, 40%);
+        z-index: -1;
+      }
+      .bubble::after {
+        content: "";
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: #0f0f10;
+        height: 85%;
+      }
+      .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .wave svg {
+        position: relative;
+        display: block;
+        width: calc(183% + 1.3px);
+        height: 172px;
+      }
+
+      .wave .shape-fill {
+        fill: #0f0f10;
+      }
+      .spacer {
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .layer1 {
+        background-image: url("layered-waves-haikei.svg");
+      }
+      .flip {
+        transform: rotate(180deg);
+      }
+      .blob-motion {
+        position: absolute;
+        transform: translateY(-20%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="blue">
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, magni
+        cumque deleniti autem facere ipsa sed enim explicabo blanditiis
+        accusamus! Molestias molestiae voluptatum quo quae saepe vero placeat
+        commodi error!
+      </p>
+      <div class="curve"></div>
+    </section>
+    <section>
+      <h1>Nice Curves</h1>
+      <p>
+        Aspernatur, eligendi atque alias saepe recusandae quisquam. Quia,
+        mollitia necessitatibus quae sunt dignissimos nostrum ea consectetur hic
+        consequatur magni blanditiis fugiat tenetur cumque sapiente expedita
+        voluptate quisquam pariatur est autem.
+      </p>
+    </section>
+    <section class="bubble">
+      <h1>Nice Curves</h1>
+      <p>
+        Earum, reiciendis modi. Est reprehenderit facilis a accusantium, quam
+        illum nihil delectus quos deleniti, atque libero molestias maiores
+        voluptates officia laboriosam enim fugit maxime vitae velit odio aut!
+        Molestias, aspernatur.
+      </p>
+    </section>
+    <section class="dark">
+      <h1>Nice Curves</h1>
+      <p>
+        Iure ipsam quia architecto? Fugiat expedita exercitationem blanditiis
+        consequuntur, nemo quam molestiae officiis vel impedit ex ullam modi
+        labore, minus eum laboriosam voluptates magni esse minima earum maiores
+        provident! Totam!
+      </p>
+    </section>
+    <section class="red">
+      <h1>Nice Curves</h1>
+      <p>
+        Alias veniam, error reprehenderit et ad molestias velit reiciendis ex
+        labore iure dolor inventore esse nobis recusandae consectetur debitis
+        ipsam corporis ducimus asperiores? Porro iure assumenda, officiis
+        voluptatibus id reprehenderit.
+      </p>
+      <div class="wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <div class="spacer layer1"></div>
+    <section>
+      <h1>Nice Curves</h1>
+      <p>
+        Earum voluptate quos inventore eaque. Voluptatibus dolores expedita esse
+        doloribus reiciendis hic facilis unde impedit vel suscipit eaque
+        aspernatur, sapiente obcaecati delectus, ad quasi mollitia modi
+        repudiandae voluptatum nisi ratione?
+      </p>
+    </section>
+    <section>
+      <h1>Nice Curves</h1>
+      <p>
+        Tempore, aperiam quasi qui ipsum ut dignissimos itaque. Modi, sapiente?
+        Iusto laudantium distinctio enim reprehenderit debitis nesciunt natus
+        quo optio, nobis quae. Saepe suscipit enim animi qui aliquam eius
+        veritatis?
+      </p>
+    </section>
+    <div class="spacer layer1 flip"></div>
+    <section class="red">
+      <h1>Nice Curves</h1>
+      <p>
+        Optio earum expedita delectus et inventore repellendus neque nobis,
+        corrupti doloribus sapiente perferendis, enim, tempora atque qui
+        architecto dolorum unde voluptatibus vero? Saepe consectetur odio
+        veritatis tenetur, ab quod iure.
+      </p>
+      <svg
+        id="visual"
+        viewBox="0 0 900 600"
+        width="900"
+        height="600"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <g transform="translate(379.1215221264496 304.3186201820958)">
+          <path
+            id="blob1"
+            d="M138.5 -262.8C152.1 -232.1 116.6 -139.5 145 -85.4C173.5 -31.3 265.7 -15.6 300.4 20C335.1 55.7 312.2 111.3 267.4 137.2C222.7 163 156.1 159 107.9 187C59.7 215 29.8 275 5.3 265.8C-19.2 256.5 -38.3 178.1 -55.5 132.1C-72.7 86.2 -87.9 72.9 -111.3 56.3C-134.7 39.7 -166.4 19.8 -173.7 -4.2C-181.1 -28.3 -164.1 -56.7 -144.1 -79C-124 -101.4 -100.7 -117.8 -76.2 -142.2C-51.7 -166.5 -25.8 -198.7 18.3 -230.5C62.5 -262.3 125 -293.5 138.5 -262.8"
+            fill="#dd2e1e"
+          ></path>
+        </g>
+        <g
+          transform="translate(412.1346172731013 286.53067233163017)"
+          style="visibility: hidden"
+        >
+          <path
+            id="blob2"
+            d="M163.1 -250C216.2 -251.9 267.5 -217.9 259.6 -170.3C251.8 -122.7 184.9 -61.3 173.4 -6.7C161.8 48 205.6 96 217.2 150.1C228.8 204.3 208.1 264.5 166.6 275.2C125 285.8 62.5 246.9 5.4 237.5C-51.7 228.2 -103.3 248.3 -118.9 222.6C-134.5 197 -114 125.5 -103.8 80.7C-93.6 36 -93.7 18 -117.6 -13.8C-141.6 -45.7 -189.4 -91.3 -184.3 -109.5C-179.2 -127.7 -121.1 -118.4 -81.5 -124.4C-42 -130.4 -21 -151.7 17 -181.2C55 -210.6 110 -248.2 163.1 -250"
+            fill="#dd2e1e"
+          ></path>
+        </g>
+      </svg>
+      <script>
+        const tween = KUTE.fromTo(
+          "#blob1",
+          { path: "#blob1" },
+          { path: "#blob2" },
+          { repeat: 999, duration: 3000, yoyo: true }
+        ).start();
+      </script>
+    </section>
+    <div class="spacer layer1"></div>
+  </body>
+</html>
