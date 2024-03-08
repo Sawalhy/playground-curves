@@ -1,2 +1,2 @@
 # test
-testing hostng
+For testing github hosting functionality
