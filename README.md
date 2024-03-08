@@ -1,2 +1,2 @@
-# test
-For testing github hosting functionality
+# Curves
+Playground Project For Experimenting With Curves
